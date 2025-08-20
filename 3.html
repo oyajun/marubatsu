@@ -31,11 +31,11 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-5xl"> <!-- 横幅を少し広げました -->
+    <!-- ▼▼▼ 変更点1: 左右の余白(padding)を少し減らしました (p-4 -> px-2 py-4) ▼▼▼ -->
+    <div class="container mx-auto px-2 py-4 sm:p-6 lg:p-8 max-w-5xl">
         <!-- ヘッダー -->
         <header class="text-center mb-6">
             <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">150問 まるばつ記録アプリ</h1>
-            <!-- 説明文を更新 -->
             <p class="mt-2 text-gray-600">各問題に3つずつ、まる(○)かばつ(×)を記録できます。</p>
         </header>
 
@@ -87,10 +87,10 @@
             function createQuiz() {
                 let quizHTML = '';
                 for (let i = 0; i < TOTAL_QUESTIONS; i++) {
-                    // ▼▼▼ 変更点: ボタンのコンテナをflexからgridに変更し、狭い画面でも間隔を保つように修正 ▼▼▼
                     quizHTML += `
                         <div class="bg-white p-2 sm:p-3 rounded-lg shadow flex items-center" data-question-card="${i}">
-                            <p class="font-bold text-base text-gray-700 w-16 shrink-0">Q. ${i + 1}</p>
+                            <!-- ▼▼▼ 変更点2: 問題番号の幅を詰めました (w-16 -> w-14) ▼▼▼ -->
+                            <p class="font-bold text-base text-gray-700 w-14 shrink-0">Q. ${i + 1}</p>
                             <div class="flex-grow grid grid-cols-3 gap-1 sm:gap-2">
                                 <!-- 1セット目 -->
                                 <div class="flex justify-center gap-2 sm:gap-3" data-set-container="1">
