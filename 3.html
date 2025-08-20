@@ -31,8 +31,8 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- ▼▼▼ 変更点1: 左右の余白(padding)を少し減らしました (p-4 -> px-2 py-4) ▼▼▼ -->
-    <div class="container mx-auto px-2 py-4 sm:p-6 lg:p-8 max-w-5xl">
+    <!-- ▼▼▼ 変更点: px-2を削除し、小さい画面での左右の余白を0にしました ▼▼▼ -->
+    <div class="container mx-auto py-4 sm:p-6 lg:p-8 max-w-5xl">
         <!-- ヘッダー -->
         <header class="text-center mb-6">
             <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">150問 まるばつ記録アプリ</h1>
@@ -89,7 +89,6 @@
                 for (let i = 0; i < TOTAL_QUESTIONS; i++) {
                     quizHTML += `
                         <div class="bg-white p-2 sm:p-3 rounded-lg shadow flex items-center" data-question-card="${i}">
-                            <!-- ▼▼▼ 変更点2: 問題番号の幅を詰めました (w-16 -> w-14) ▼▼▼ -->
                             <p class="font-bold text-base text-gray-700 w-14 shrink-0">Q. ${i + 1}</p>
                             <div class="flex-grow grid grid-cols-3 gap-1 sm:gap-2">
                                 <!-- 1セット目 -->
