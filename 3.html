@@ -31,7 +31,6 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- ▼▼▼ 変更点: px-2を削除し、小さい画面での左右の余白を0にしました ▼▼▼ -->
     <div class="container mx-auto py-4 sm:p-6 lg:p-8 max-w-5xl">
         <!-- ヘッダー -->
         <header class="text-center mb-6">
@@ -87,10 +86,11 @@
             function createQuiz() {
                 let quizHTML = '';
                 for (let i = 0; i < TOTAL_QUESTIONS; i++) {
+                    // ▼▼▼ 変更点: 画面幅に応じてレイアウトが切り替わるようにクラスを修正しました ▼▼▼
                     quizHTML += `
                         <div class="bg-white p-2 sm:p-3 rounded-lg shadow flex items-center" data-question-card="${i}">
-                            <p class="font-bold text-base text-gray-700 w-14 shrink-0">Q. ${i + 1}</p>
-                            <div class="flex-grow grid grid-cols-3 gap-1 sm:gap-2">
+                            <p class="font-bold text-base text-gray-700 w-12 sm:w-16 shrink-0">Q. ${i + 1}</p>
+                            <div class="flex-grow flex justify-between sm:grid sm:grid-cols-3 sm:gap-2">
                                 <!-- 1セット目 -->
                                 <div class="flex justify-center gap-2 sm:gap-3" data-set-container="1">
                                     <button class="answer-btn w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-blue-400 text-blue-500 font-bold text-xl transition-all duration-200 hover:bg-blue-100" data-question="${i}" data-answer="○" data-set="1">○</button>
