@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>バージョン選択</title>
+    <!-- ▼▼▼ 変更点1: ページタイトルを変更しました ▼▼▼ -->
+    <title>まるばつ記録アプリ</title>
     <!-- Tailwind CSSを読み込みます -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 見やすいフォントを読み込みます -->
@@ -19,35 +20,45 @@
 </head>
 <body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen">
 
-    <!-- ▼▼▼ 変更点: max-w-md から max-w-lg に変更して、コンテナの幅を広げました ▼▼▼ -->
-    <div class="container mx-auto p-8 max-w-lg text-center">
+    <div class="container mx-auto p-8 max-w-lg text-center flex flex-col justify-between h-screen sm:h-auto">
         
-        <!-- ヘッダー -->
-        <header class="mb-10">
-            <!-- ▼▼▼ 変更点: whitespace-nowrap を削除しました ▼▼▼ -->
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">まるばつ記録アプリ</h1>
-            <p class="mt-4 text-lg text-gray-600">バージョンを選択してください</p>
-        </header>
+        <div>
+            <!-- ヘッダー -->
+            <header class="mb-10">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">まるばつ記録アプリ</h1>
+                <p class="mt-4 text-lg text-gray-600">バージョンを選択してください</p>
+            </header>
 
-        <!-- 選択ボタンエリア -->
-        <main class="flex flex-col gap-6">
-            
-            <!-- 1セットバージョンへのリンク -->
-            <a href="1.html" class="block w-full bg-white text-blue-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-blue-500">
-                1セット バージョン
-            </a>
-            
-            <!-- 2セットバージョンへのリンク -->
-            <a href="2.html" class="block w-full bg-white text-green-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-green-500">
-                2セット バージョン
-            </a>
+            <!-- 選択ボタンエリア -->
+            <main class="flex flex-col gap-6">
+                
+                <!-- 1セットバージョンへのリンク -->
+                <a href="1.html" class="block w-full bg-white text-blue-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-blue-500">
+                    1セット バージョン
+                </a>
+                
+                <!-- 2セットバージョンへのリンク -->
+                <a href="2.html" class="block w-full bg-white text-green-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-green-500">
+                    2セット バージョン
+                </a>
 
-            <!-- 3セットバージョンへのリンク -->
-            <a href="3.html" class="block w-full bg-white text-red-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-red-500">
-                3セット バージョン
-            </a>
+                <!-- 3セットバージョンへのリンク -->
+                <a href="3.html" class="block w-full bg-white text-red-600 font-bold text-xl py-5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-red-500">
+                    3セット バージョン
+                </a>
 
-        </main>
+            </main>
+        </div>
+
+        <!-- ▼▼▼ 変更点2: GitHubへのリンクをフッターに追加しました ▼▼▼ -->
+        <footer class="mt-12 text-center">
+            <a href="https://github.com/oyajun/marubatsu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-500 hover:text-gray-800 transition-colors duration-300">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                </svg>
+                View on GitHub
+            </a>
+        </footer>
 
     </div>
 
